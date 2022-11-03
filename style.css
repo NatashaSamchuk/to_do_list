@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #7e8083;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container{
+    margin: 0 auto;
+    min-width: 100vw;
+    min-height: 100vh;
+    border: 1px lightgrey solid;
+    background: url("img/bg.jpg") 50%/cover no-repeat;
+}
+
+
+.list{
+    width: 720px;
+    margin: 50px auto;
+    padding: 20px 40px;
+    background: linear-gradient(120deg, rgb(248, 251, 250), rgb(240, 243, 243));
+    box-shadow: -3px -2px 7px #ffffff, 4px 3px 6px rgb(174 174 192 / 40%);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.list h1{
+    font-size: 44px;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.imgContainer{
+    width: 640px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 20px;
+    align-self: center;
+    box-shadow: -3px -2px 7px #ffffff, 4px 3px 6px rgb(174 174 192 / 40%);
+}
+
+.imgContainer img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+
+
+.input-panel input{
+    width: calc(100% - 122px);
+    font-weight: 200;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin-right: 10px;
+    outline: none;
+    background: linear-gradient(120deg, rgb(248, 251, 250), rgb(240, 243, 243));
+    box-shadow: inset 4px 3px 6px rgb(174 174 192 / 40%), inset -3px -2px 7px #ffffff;
+}
+
+.input-panel button{
+    padding: 10px 20px 7px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 200;
+    background: linear-gradient(120deg, rgb(211, 211, 211), rgb(110, 110, 110));
+    box-shadow: 3px 3px 3px #e1e5ea, 3px 3px 5px rgb(122 122 134 / 40%);
+    cursor: pointer;
+    /*transition: all 2s;*/
+}
+
+.task-list {
+    width: 600px;
+}
+
+#start-message {
+    margin: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 3px 8px;
+    margin: 10px 10px;
+    border-radius: 7px;
+    background: linear-gradient(120deg, rgb(213, 213, 213), rgb(238, 238, 238));
+    box-shadow: 4px 3px 6px rgb(174 174 192 / 40%), -3px -2px 7px #ffffff;
+}
+
+.task input{
+    background: linear-gradient(120deg, rgb(248, 251, 250), rgb(240, 243, 243));
+    box-shadow: 4px 3px 6px rgb(174 174 192 / 40%), -3px -2px 7px #ffffff;
+    padding: 12px;
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.task input:checked{
+    padding: 0;
+    background: #D4A6ED;
+    height: 24px;
+}
+
+.task input:checked:before{
+    content: "\2713";
+    background-color: #D4A6ED;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 5px 8px 5px 7px;
+    font-size: 12px;
+}
+
+.task p {
+    margin-left: 10px;
+}
+
+#show-not-completed-btn{
+    margin-left: 10px;
+}
+
+.task button {
+    margin-left: auto;
+}
+
+.completed p {
+    text-decoration: line-through;
+}
+
+.input-panel {
+    width: 570px;
+    margin: 8px;
+    padding: 2px;
+}
+
+@media (max-width: 1100px) {
+    .list{
+        width: 600px;
+    }
+
+    .list h1{
+        font-size: 35px;
+    }
+
+    .task p {
+        font-size: 20px;
+    }
+
+    .imgContainer{
+        width: 520px;
+        height: 220px;
+    }
+
+    .input-panel input{
+        width: calc(100% - 170px);
+    }
+
+    .task-list {
+        width: 520px;
+    }
+}
+
+@media (max-width: 750px) {
+    .list{
+        width: 500px;
+    }
+
+    .list h1{
+        font-size: 30px;
+    }
+
+    .task p {
+        font-size: 16px;
+    }
+
+    .imgContainer{
+        width: 420px;
+        height: 200px;
+    }
+
+    .input-panel input{
+        width: calc(100% - 270px);
+    }
+
+    .task-list {
+        width: 420px;
+    }
+}
+
+@media (max-width: 590px) {
+    .list{
+        width: 350px;
+    }
+
+    .list h1{
+        font-size: 25px;
+    }
+
+    .imgContainer{
+        width: 270px;
+        height: 200px;
+    }
+
+    .input-panel input{
+        width: 250px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .task-list {
+        width: 270px;
+    }
+}
+
+@media (max-width: 390px) {
+    .list{
+        width: 300px;
+    }
+
+    .list h1{
+        font-size: 22px;
+    }
+
+    .imgContainer{
+        width: 220px;
+        height: 180px;
+    }
+
+    .input-panel input{
+        width: 210px;
+    }
+
+    .input-panel button{
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #show-not-completed-btn{
+        margin-left: 0;
+    }
+
+    .task-list {
+        width: 220px;
+    }
+}
